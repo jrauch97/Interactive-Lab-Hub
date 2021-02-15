@@ -49,69 +49,61 @@ E) [Costume the device](#part-e-costume-the-device)
 
 F) [Record the interaction](#part-f-record)
 
-## The Report
-This readme.md page in your own repository should be edited to include the work you have done. You can delete everything but the headers and the sections between the **stars**. Write the answers to the questions under the starred sentences. Include any material that explains what you did in this lab hub folder, and link it in the readme.
-
-Labs are due on Mondays. Make sure this page is linked to on your main class hub page.
-
 ## Part A. Plan 
 
-To stage the interaction with your interactive device, think about:
-
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
-
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
-
-_Activity:_ What is happening between the actors?
-
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
-
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 **Describe your setting, players, activity and goals here.**
 
-Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
+This device will be in each room of the house, and the players will be guests of the house. When a player enteres the room, the interactive device will tunr on and change colors depending on which room the player is in. The main host of the house can decide which rooms have the colors.
+
 **Include a picture of your storyboard here**
 
-Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
+<img src="story.jpeg" width="400">
+
 **Summarize feedback you got here.**
+* It would be cool if the device changed brightness depending on how close you are to it in the room.
+* Maybe there could be a sound in each room that says 'welcome to "room {x}"'
 
 
 ## Part B. Act out the Interaction
 
-Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
-
 **Are there things that seemed better on paper than acted out?**
 
+* It was hard for the user to tell if the device was actually there or not.
+* The device itself was too small for the user to see.
+
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
+
+* The device itself should be pretty noticeble to the user
+* The costume should allow for the device to stand out in the room so that they know it is there
+* The sounds and lighting should allow for the device to be the center of attention when they walk into the room.
 
 
 ## Part C. Prototype the device
 
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
-
-Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
-
-We invented this tool for this lab! 
 **Give us feedback on Tinkerbelle.**
 
+* I had trouble getting the phone and computer to sync up at times.
+* There was occaasionally a lag in between when the control was pressed and the lighting changed colors
+
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 **Include your first attempts at recording the set-up video here.**
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
-
-**Show the follow-up work here.**
 
 ## Part E. Costume the device
 
-Only now should you start worrying about what the device should look like. Develop a costume so that you can use your phone as this device.
-
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
-
 **Include sketches of what your device might look like here.**
 
+<img src="sketch1.jpeg" width="400">
+<img src="sketch2.jpeg" width="400">
+<img src="sketch3.jpeg" width="400">
+<img src="real1.jpeg" width="400">
+
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
+
+* The main goal of the costume is to allow the device to be noticable to the user in the room without it looking out of place
+* It should be viewed as a main peice of furniture that fits into the room
+* The device itself should blend into the room and be noticiable at the same time.
 
 
 ## Part F. Record
