@@ -88,7 +88,7 @@ This device will be in each room of the house, and the players will be guests of
 ## Part D. Wizard the device
 
 **Include your first attempts at recording the set-up video here.**
-
+<img src="real1.jpeg" width="400">
 
 ## Part E. Costume the device
 
@@ -97,7 +97,6 @@ This device will be in each room of the house, and the players will be guests of
 <img src="sketch1.jpeg" width="400">
 <img src="sketch2.jpeg" width="400">
 <img src="sketch3.jpeg" width="400">
-<img src="real1.jpeg" width="400">
 
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 
@@ -109,6 +108,10 @@ This device will be in each room of the house, and the players will be guests of
 ## Part F. Record
 
 **Take a video of your prototyped interaction.**
+
+<video width="320" height="240" controls>
+  <source src="attempt.mov" type="video/mp4">
+</video>
 
 **Please indicate anyone you collaborated with on this Lab.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
