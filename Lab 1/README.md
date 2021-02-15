@@ -87,7 +87,6 @@ This device will be in each room of the house, and the players will be guests of
 
 ## Part D. Wizard the device
 
-**Include your first attempts at recording the set-up video here.**
 <img src="real1.jpeg" width="400">
 
 ## Part E. Costume the device
@@ -108,6 +107,10 @@ This device will be in each room of the house, and the players will be guests of
 ## Part F. Record
 
 **Take a video of your prototyped interaction.**
+
+The video is titled attempt.mov
+
+It showcases how the scene would look if the device changed color as I entered a different room
 
 <video width="320" height="240" controls>
   <source src="attempt.mov" type="video/mp4">
