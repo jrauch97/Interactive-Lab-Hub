@@ -1,38 +1,7 @@
 
 
 # Staging Interaction
-
-In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
-
-There is no actor that plays Tinkerbell--her existence in the play comes from the interactions that the other characters have with her.
-
-
-
-For lab this week, we draw on this and other inspirations from theatre to stage interactions with a device where the main mode of display/output for the interactive device you are designing is lighting. You will plot the interaction with a storyboard, and use your computer and a smartphone to experiment with what the interactions will look and feel like. _Make sure you read all the instructions and understand the whole of the laboratory activity before starting!_
-
-
-
-## Prep
-
-1. Set up [your Github "Lab Hub" repository](../../../) by [following these instructions](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2021Spring/readings/Submitting%20Labs.md).
-2. Set up the README.md for your Hub repository (for instance, so that it has your name and points to your own Lab 1) and [learn how](https://guides.github.com/features/mastering-markdown/) to post links to your submissions on your readme.md so we can find them easily.
-
-### For lab, you will need:
-
-1. Paper
-1. Markers/ Pen
-1. Smart Phone--Main required feature is that the phone needs to have a browser and display a webpage.
-1. Computer--we will use your computer to host a webpage which also features controls
-1. Found objects and materials--you’ll have to costume your phone so that it looks like some other device. These materials can include doll clothes, a paper lantern, a bottle, human clothes, a pillow case. Be creative!
-1. Scissors
-
-### Deliverables for this lab are: 
-1. Storyboard
-1. Sketches/photos of costumed device
-1. Any reflections you have on the process.
-1. Video sketch of the prototyped interaction.
-1. Submit these in the lab1 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
-
+ find them easily.
 
 ## Overview
 For this assignment, you are going to 
@@ -113,28 +82,62 @@ The video is titled attempt.mov
 It showcases how the scene would look if the device changed color as I entered a different room
 
 <video width="320" height="240" controls>
-  <source src="attempt.mov" type="video/mp4">
+  <source src="attempt.mov" type="video/mov">
 </video>
 
-**Please indicate anyone you collaborated with on this Lab.**
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
 # Staging Interaction, Part 2 
 
-This describes the second week's work for this lab activity.
-
-
-## Prep (to be done before Lab on Wednesday)
-
-You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
-
 **Summarize feedback from your partners here.**
+
+*	change colors depending on time of day
+* change colors depending on weather
+* have a different sound per room	
 
 ## Make it your own
 
-Do last week’s assignment again, but this time: 
-1) It doesn’t have to (just) use light, 
-2) You can use any modality (e.g., vibration, sound) to prototype the behaviors, 
-3) We will be grading with an emphasis on creativity. 
-
 **Document everything here.**
+
+In part 2 of the lab, the device is now able to interact with the user using more data points than before to make the interaction more personable.
+The device will turn on as a user enters the room, and will change color depending on the current temperature outside.  In addition, a audio recording will play that will greet the user and advise them on what to wear based on the current weather.
+
+## Storyboard
+
+<img src="story2.jpeg" width="400">
+
+## Device
+
+The device was modified to allow for a better visualization of the light. Paper was taped over the front of the stand to mask the phone from being seen.
+This gives off the impression that the light is a genuine source and operating indepently from the user.
+
+<img src="real2.jpg" width="400">
+
+## Changes to Tinkerbelle
+
+In order to give off the illusion that the device was changing on its own, I modified the tinkerbelle script to operate on a timer. That way when recording the scene, I was able to walk right into the room and have the device change color instantly. In future iterations of this device, a motion sensor could be used to accomplish this.
+
+```  var change = false;
+  setInterval(function () {
+    var hexCode;
+    if (change) {
+      hexCode = "#FFFFFF";
+      change = false;
+    } else {
+      hexCode = "#0000FF";
+      change = true;
+    }
+    // This will be executed every 10 seconds
+    document.body.style.backgroundColor = hexCode;
+    socket.emit('hex', hexCode)
+  }, 10000);
+```
+
+## Video
+
+The video is titled interaction.mp4
+
+It showcases the device change to two different colors depending on what the weather would be that day. In addition, an audio file that I recorded plays to simulate the device interacting with the user. 
+
+<video width="320" height="240" controls>
+  <source src="interaction.mp4" type="video/mp4">
+</video>
