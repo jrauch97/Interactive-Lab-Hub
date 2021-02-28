@@ -78,7 +78,7 @@ while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
-    t = strftime("%H:%M:%S")
+    t = strftime("%I:%M %p")
 
     if buttonB.value and not buttonA.value:
         color = rand_color()
