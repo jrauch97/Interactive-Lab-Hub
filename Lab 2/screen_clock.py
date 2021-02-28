@@ -7,7 +7,7 @@ import adafruit_rgb_display.st7789 as st7789
 
 from time import strftime
 
-from random import randint
+import random 
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
