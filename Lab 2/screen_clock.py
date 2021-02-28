@@ -7,6 +7,8 @@ import adafruit_rgb_display.st7789 as st7789
 
 from time import strftime
 
+from random import randint
+
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
 dc_pin = digitalio.DigitalInOut(board.D25)
@@ -62,14 +64,25 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
+
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
+buttonA.switch_to_input()
+buttonB.switch_to_input()
+
+color = "#FFFFFF"
+
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     t = strftime("%H:%M:%S")
 
+    if buttonA.value and buttonB.value:
+        color = "%06x" % random.randint(0, 0xFFFFFF)
+    
     y = top
-    draw.text((x, y), t, font=font, fill="#FFFFFF")
+    draw.text((x, y), t, font=font, fill=color)
 
     # Display image.
     disp.image(image, rotation)
