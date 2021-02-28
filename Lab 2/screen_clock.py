@@ -79,7 +79,7 @@ while True:
     t = strftime("%H:%M:%S")
 
     if buttonA.value and buttonB.value:
-        color = "%06x" % random.randint(0, 0xFFFFFF)
+        color = lambda : (randint(50, 255), randint(50, 255), randint(50,255))
     
     y = top
     draw.text((x, y), t, font=font, fill=color)
