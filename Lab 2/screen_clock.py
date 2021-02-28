@@ -72,6 +72,8 @@ buttonB.switch_to_input()
 
 color = "#FFFFFF"
 
+rand_color = lambda : (randint(50, 255), randint(50, 255), randint(50,255))
+
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
@@ -79,7 +81,7 @@ while True:
     t = strftime("%H:%M:%S")
 
     if buttonA.value and buttonB.value:
-        color = lambda : (randint(50, 255), randint(50, 255), randint(50,255))
+        color = rand_color
     
     y = top
     draw.text((x, y), t, font=font, fill=color)
