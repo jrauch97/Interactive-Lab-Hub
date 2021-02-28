@@ -80,7 +80,7 @@ while True:
 
     t = strftime("%H:%M:%S")
 
-    if buttonA.value and buttonB.value:
+    if buttonB.value and not buttonA.value:
         color = rand_color()
     
     y = top
