@@ -40,10 +40,10 @@ G) [Sketch and brainstorm further interactions and features you would like for y
 
 **Take a video of your PiClock.**
 
-The user is able to change the color of the clock to a random color by pressing the button (video is clock.mov).
+The user is able to change the color of the clock to a random color by pressing the button (video is clock.mp4).
 
 <video width="320" height="240" controls>
-  <source src="clock.mov" type="video/mov">
+  <source src="clock.mp4" type="video/mov">
 </video>
 
 ## Part G. 
