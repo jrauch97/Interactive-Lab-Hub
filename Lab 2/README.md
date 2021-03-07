@@ -27,7 +27,6 @@ G) [Sketch and brainstorm further interactions and features you would like for y
 ## Part C. 
 ## Set up your RGB Display
 
-
 ## Part D. 
 ## Set up the Display Clock Demo
 
@@ -56,4 +55,7 @@ The user is able to change the color of the clock to a random color by pressing 
 
 <img src="sketch.jpeg" width="400">
 
+Pull Interactive Lab Hub updates to your repo.
+
+Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
 
