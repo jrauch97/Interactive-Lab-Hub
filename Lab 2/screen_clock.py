@@ -92,7 +92,7 @@ if x["cod"] != "401":
     z = x["weather"] 
     desc = z[0]["description"] 
 
-    mess = "The current temperateure is " + temp + " and the weather is " + desc
+    mess = "The current temperateure is " + str(temp) + " and the weather is " + desc
 
     if temp < 65:
         color = (0,200,255)
