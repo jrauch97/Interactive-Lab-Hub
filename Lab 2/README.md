@@ -17,6 +17,8 @@ F) [Make a short video of your modified barebones PiClock](#part-f)
 
 G) [Sketch and brainstorm further interactions and features you would like for your clock for Part 2.](#part-g)
 
+H) [Part 2](#part-h)
+
 ## Part A. 
 ## Connect to your Pi
 
@@ -43,7 +45,7 @@ G) [Sketch and brainstorm further interactions and features you would like for y
 The user is able to change the color of the clock to a random color by pressing the button (video is clock.mp4).
 
 <video width="320" height="240" controls>
-  <source src="clock.mp4" type="video/mov">
+  <source src="clock.mp4" type="video/mp4">
 </video>
 
 ## Part G. 
@@ -55,7 +57,16 @@ The user is able to change the color of the clock to a random color by pressing 
 
 <img src="sketch.jpeg" width="400">
 
-Pull Interactive Lab Hub updates to your repo.
+## Part H. 
 
-Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
+Video is (clock2.mp4)
 
+The modifications made this week allow for the weather to be displayed by on the device.
+The openweathermap API is used to get temperature and weather descriptions. Then the screen displays a message summarizing this.
+In addition, the screen will display a different background color depending on the temperature. Blue if less than 65, and red if greater than 65.
+Finally, the second button is used to manually shift the temperature between 25 and 85 degrees.
+
+
+<video width="320" height="240" controls>
+  <source src="clock2.mp4" type="video/mp4">
+</video>
