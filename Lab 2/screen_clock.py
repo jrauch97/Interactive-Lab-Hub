@@ -85,7 +85,8 @@ url = "http://api.openweathermap.org/data/2.5/weather?" + "appid=" + api_key + "
 response = requests.get(url) 
 res = response.json() 
 
-mess = ""
+desc = ""
+temp = 0
 
 fill = (0,0,0)
 
@@ -95,22 +96,33 @@ if res["cod"] != "401":
     weath = res["weather"] 
     desc = weath[0]["description"] 
 
-    mess = "The current temp is " + str(temp) + "\n and the weather is " + desc
 
+pressed = False  
+
+while True:
+    # Draw a black filled box to clear the image.
+
+    if buttonB.value and not buttonA.value:
+        color = rand_color()
+
+    if buttonA.value and not buttonB.value:
+        if pressed:
+            temp = 85
+            pressed = False
+        else:
+            temp = 25
+            pressed = True
+    
     if temp < 65:
         fill = (0,200,255)
     else:
         fill = (255,200,200)
+    
+    mess = "The current temp is " + str(temp) + "F \n and the weather is " + desc
 
-
-while True:
-    # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=fill, fill=fill)
 
     t = strftime("%I:%M %p")
-
-    if buttonB.value and not buttonA.value:
-        color = rand_color()
     
     y = top
     draw.text((x, y), t, font=font, fill=color)
