@@ -84,7 +84,7 @@ x = response.json()
 
 mess = ""
 
-color = (0,0,0)
+fill = (0,0,0)
 
 if x["cod"] != "401": 
     y = x["main"]
@@ -95,14 +95,14 @@ if x["cod"] != "401":
     mess = "The current temperateure is " + str(temp) + " and the weather is " + desc
 
     if temp < 65:
-        color = (0,200,255)
+        fill = (0,200,255)
     else:
-        color = (255,200,200)
+        fill = (255,200,200)
 
 
 while True:
     # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=color)
+    draw.rectangle((0, 0, width, height), outline=0, fill=fill)
 
     t = strftime("%I:%M %p")
 
