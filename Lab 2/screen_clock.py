@@ -60,7 +60,7 @@ x = 0
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 40)
 
-weath_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
+weath_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 15)
 
 
 # Turn on the backlight
@@ -95,7 +95,7 @@ if res["cod"] != "401":
     weath = res["weather"] 
     desc = weath[0]["description"] 
 
-    mess = "The current temperateure is " + str(temp) + "\n and the weather is " + desc
+    mess = "The current temp is " + str(temp) + "\n and the weather is " + desc
 
     if temp < 65:
         fill = (0,200,255)
@@ -105,7 +105,7 @@ if res["cod"] != "401":
 
 while True:
     # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=fill)
+    draw.rectangle((0, 0, width, height), outline=fill, fill=fill)
 
     t = strftime("%I:%M %p")
 
