@@ -80,17 +80,17 @@ rand_color = lambda : (randint(50, 255), randint(50, 255), randint(50,255))
 api_key = "2b2d65a0c659df2209f94b23bc340e8c"
 url = "http://api.openweathermap.org/data/2.5/weather?" + "appid=" + api_key + "&id=5128581" 
 response = requests.get(url) 
-x = response.json() 
+res = response.json() 
 
 mess = ""
 
 fill = (0,0,0)
 
-if x["cod"] != "401": 
-    y = x["main"]
-    temp = y["temp"] 
-    z = x["weather"] 
-    desc = z[0]["description"] 
+if res["cod"] != "401": 
+    main = res["main"]
+    temp = main["temp"] 
+    weath = res["weather"] 
+    desc = weath[0]["description"] 
 
     mess = "The current temperateure is " + str(temp) + " and the weather is " + desc
 
@@ -111,7 +111,7 @@ while True:
     
     y = top
     draw.text((x, y), t, font=font, fill=color)
-    # draw.text((x, y), mess , font=font, fill=color)
+    draw.text((x, y+10), mess , font=font, fill=color)
 
     # Display image.
     disp.image(image, rotation)
