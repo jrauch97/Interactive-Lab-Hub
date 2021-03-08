@@ -111,7 +111,7 @@ while True:
     
     y = top
     draw.text((x, y), t, font=font, fill=color)
-    draw.text((x, y+10), mess , font=font, fill=color)
+    # draw.text((x, y), mess , font=font, fill=color)
 
     # Display image.
     disp.image(image, rotation)
