@@ -60,7 +60,7 @@ x = 0
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 40)
 
-weath_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 10)
+weath_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
 
 
 # Turn on the backlight
@@ -95,7 +95,7 @@ if res["cod"] != "401":
     weath = res["weather"] 
     desc = weath[0]["description"] 
 
-    mess = "The current temperateure is " + str(temp) + " and the weather is " + desc
+    mess = "The current temperateure is " + str(temp) + "\n and the weather is " + desc
 
     if temp < 65:
         fill = (0,200,255)
@@ -114,7 +114,7 @@ while True:
     
     y = top
     draw.text((x, y), t, font=font, fill=color)
-    draw.text((x, y+30), mess , font=weath_font, fill=color)
+    draw.text((x, y+50), mess , font=weath_font, fill=color)
 
     # Display image.
     disp.image(image, rotation)
