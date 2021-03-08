@@ -81,7 +81,7 @@ rand_color = lambda : (randint(50, 255), randint(50, 255), randint(50,255))
 #https://www.geeksforgeeks.org/python-find-current-weather-of-any-city-using-openweathermap-api/
 
 api_key = "2b2d65a0c659df2209f94b23bc340e8c"
-url = "http://api.openweathermap.org/data/2.5/weather?" + "appid=" + api_key + "&id=5128581" 
+url = "http://api.openweathermap.org/data/2.5/weather?" + "appid=" + api_key + "&id=5128581&units=imperial" 
 response = requests.get(url) 
 res = response.json() 
 
