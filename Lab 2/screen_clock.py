@@ -60,6 +60,9 @@ x = 0
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 40)
 
+weath_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 10)
+
+
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
@@ -111,7 +114,7 @@ while True:
     
     y = top
     draw.text((x, y), t, font=font, fill=color)
-    draw.text((x, y+10), mess , font=font, fill=color)
+    draw.text((x, y+30), mess , font=weath_font, fill=color)
 
     # Display image.
     disp.image(image, rotation)
