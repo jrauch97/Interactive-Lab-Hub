@@ -3,6 +3,7 @@ import subprocess
 import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
+import requests, json 
 import adafruit_rgb_display.st7789 as st7789
 
 from time import strftime
@@ -74,9 +75,34 @@ color = "#FFFFFF"
 
 rand_color = lambda : (randint(50, 255), randint(50, 255), randint(50,255))
 
+#https://www.geeksforgeeks.org/python-find-current-weather-of-any-city-using-openweathermap-api/
+
+api_key = "2b2d65a0c659df2209f94b23bc340e8c"
+url = "http://api.openweathermap.org/data/2.5/weather?" + "appid=" + api_key + "&id=5128581" 
+response = requests.get(url) 
+x = response.json() 
+
+mess = ""
+
+color = (0,0,0)
+
+if x["cod"] != "401": 
+    y = x["main"]
+    temp = y["temp"] 
+    z = x["weather"] 
+    desc = z[0]["description"] 
+
+    mess = "The current temperateure is " + temp + " and the weather is " + desc
+
+    if temp < 65:
+        color = (0,200,255)
+    else:
+        color = (255,200,200)
+
+
 while True:
     # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw.rectangle((0, 0, width, height), outline=0, fill=color)
 
     t = strftime("%I:%M %p")
 
@@ -85,6 +111,7 @@ while True:
     
     y = top
     draw.text((x, y), t, font=font, fill=color)
+    draw.text((x, y+10), mess , font=font, fill=color)
 
     # Display image.
     disp.image(image, rotation)
